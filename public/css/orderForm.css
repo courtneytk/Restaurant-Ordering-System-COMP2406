@@ -1,0 +1,21 @@
+
+.column {
+    float: left;
+}
+
+.columnright{
+    float: right;
+
+}
+
+.left{
+    width: 10%;
+}
+
+.right {
+    width: 25%;
+}
+
+.middle {
+    width: 65%;
+}

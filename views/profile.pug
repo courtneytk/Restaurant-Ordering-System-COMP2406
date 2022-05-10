@@ -1,0 +1,51 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title #{user.username}
+    if !user.privacy
+        body
+        include ./partials/headerNormal
+        h1 Profile of #{user.username}
+        if session.loggedin && session.username == user.username 
+            p Private Mode:
+            p On
+            input(type="radio" id="on" onclick="onClicked()") 
+            p Off
+            input(type="radio" id="off" onclick="offClicked()" checked) 
+            br
+            input(type="button" id="save" value="Save Changes" onclick="submit()")
+            br
+        h3 Order History:
+            each item in order 
+                if user.username == item.username
+                    ul
+                        li
+                            a(href="/orders/" + item._id) #{item._id}
+    else 
+        body
+        include ./partials/headerNormal
+        h1 Profile of #{user.username}
+        if session.loggedin && session.username == user.username 
+            p Private Mode:
+            p On
+            input(type="radio" id="on" onclick="onClicked()" checked) 
+            p Off
+            input(type="radio" id="off" onclick="offClicked()") 
+            br
+            input(type="button" id="save" value="Save Changes" onclick="submit()")
+            br
+        h3 Order History:
+            each item in order 
+                if user.username == item.username
+                    ul
+                        li
+                            a(href="/orders/" + item._id) #{item._id}
+script!= `const object = ${JSON.stringify(user)};` 
+script(src="/js/profile.js")
+
+
+
+        

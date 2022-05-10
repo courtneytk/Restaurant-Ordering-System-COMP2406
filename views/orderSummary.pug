@@ -1,0 +1,24 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Order Summary
+    body
+    include ./partials/headerNormal
+    h1 Summary of Order ##{order._id}
+    p #{order.username}'s Order!
+    br
+    h3 Restaurant
+    p #{order.restaurantName}
+    br
+    h3 Order Contents
+    each item in order.orders
+        p #{item.name} x #{item.quantity}
+    br
+    br
+    h3 Payment
+    p Subtotal: $#{order.subtotal}
+    p Tax: $#{order.tax}
+    p Fee: $#{order.fee}
+    p Total: $#{order.total}

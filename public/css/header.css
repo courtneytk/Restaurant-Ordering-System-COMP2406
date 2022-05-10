@@ -1,0 +1,26 @@
+.container,input,button,select{
+    display:flex;
+    margin-left: 1%;
+}
+
+a,p,h1,div{
+    flex:0.09;
+    margin-left: 1%;
+
+}
+
+h1{
+    margin-left: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 200%;
+    color: #A8B9DB;
+}
+
+h2,h3{
+    margin-left: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    color: #A8B9DB;
+}
+
+
