@@ -1,6 +1,6 @@
 Purpose: 
 
-Created a webpage which allows users to login, see users, make restaurant orders, see their order history, as well as see the order histories of other users and purchase meals at various restaurants. Additionally, there is authentication to prevent non-logged in users from seeing restaurant options, etc. 
+Created a webpage which allows users to login, see users, make restaurant orders, see their order history, as well as see the order histories of other users and purchase meals at various restaurants. To accomplish this, this application uses a database to store user profile and order information. Additionally, there exists session support to the application so that users can log in, place orders, and view a history of their orders. Users can set their  profile to private or public, which will also impact who can view their order history.
 
 Languages & Concepts:
 
